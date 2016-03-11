@@ -280,6 +280,19 @@
                                     <outlet property="delegate" destination="s7G-UG-MWg" id="hkO-po-cki"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ekf-ud-kKT">
+                                <rect key="frame" x="112" y="153" width="151" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Max. 5 ingredientes">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="13" name="HelveticaNeue-Italic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJl-At-9T3">
                                 <rect key="frame" x="20" y="595" width="335" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -438,6 +451,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sej-c1-2t5"/>
+        <segue reference="WD4-Ex-YRf"/>
     </inferredMetricsTieBreakers>
 </document>
