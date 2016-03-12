@@ -18,6 +18,8 @@ class extraFlavorViewController: UIViewController, UITableViewDataSource, UITabl
     @IBOutlet weak var flavorLabel: UILabel!
     
     
+    @IBOutlet weak var myButton: UIButton!
+    
     let flavors = ["Jamón", "Pepperoni", "Pavo", "Salchicha", "Aceituna", "Cebolla", "Pimiento", "Piña"]
 
     
@@ -38,19 +40,24 @@ class extraFlavorViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewWillAppear(animated: Bool) {
         print("Pizza: \(temp3.size), \(temp3.tipoMasa), \(temp3.tipoQueso)" )
+        checkArreglo()
         
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        checkArreglo()
         return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        checkArreglo()
         return flavors.count
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        checkArreglo()
         if arr.count < 5{
+            checkArreglo()
             tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = UITableViewCellAccessoryType.Checkmark
             let row = indexPath.row
             arr.insert(flavors[row], atIndex: 0)
@@ -58,6 +65,7 @@ class extraFlavorViewController: UIViewController, UITableViewDataSource, UITabl
             let multiLineString = arr.joinWithSeparator(", ")
             flavorLabel.text = multiLineString
         }else{
+            checkArreglo()
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
             let alertController = UIAlertController(title: "Atención!", message:
                 "Pizza limitada a 5 ingredientes", preferredStyle: UIAlertControllerStyle.Alert)
@@ -69,11 +77,14 @@ class extraFlavorViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = UITableViewCellAccessoryType.None
+            checkArreglo()
+            tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = UITableViewCellAccessoryType.None
         let row = indexPath.row
         if arr.isEmpty{
             print("Empty array")
+            checkArreglo()
         }else{
+            checkArreglo()
             let index = arr.indexOf(flavors[row])
             arr.removeAtIndex(index!)
             print(arr)
@@ -90,15 +101,16 @@ class extraFlavorViewController: UIViewController, UITableViewDataSource, UITabl
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! flavorTableViewCell
         let row = indexPath.row
         cell.textLabel?.text = flavors[row]
-        
+        checkArreglo()
         
         return cell
     }
     
     
     
-    @IBAction func paso4Button() {
-        temp3.ingredienteExtra = arr
+    @IBAction func paso4Button(sender: AnyObject) {
+        
+            temp3.ingredienteExtra = arr
         
     }
   
@@ -107,6 +119,16 @@ class extraFlavorViewController: UIViewController, UITableViewDataSource, UITabl
         let sigVista = segue.destinationViewController as! orderViewController
         sigVista.temp4 = paso4
         
+    }
+    
+    
+    func checkArreglo(){
+        if arr.count == 0 {
+            myButton.hidden = true
+        }
+        else{
+            myButton.hidden = false
+        }
     }
 
     
