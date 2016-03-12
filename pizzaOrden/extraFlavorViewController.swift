@@ -26,7 +26,7 @@ class extraFlavorViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.allowsMultipleSelection = true
-
+        checkArreglo()
 
         // Do any additional setup after loading the view.
     }
@@ -64,7 +64,10 @@ class extraFlavorViewController: UIViewController, UITableViewDataSource, UITabl
             print(arr)
             let multiLineString = arr.joinWithSeparator(", ")
             flavorLabel.text = multiLineString
-        }else{
+        }else if arr.count == 0 {
+            checkArreglo()
+        }
+        else{
             checkArreglo()
             tableView.deselectRowAtIndexPath(indexPath, animated: true)
             let alertController = UIAlertController(title: "Atención!", message:
@@ -84,12 +87,12 @@ class extraFlavorViewController: UIViewController, UITableViewDataSource, UITabl
             print("Empty array")
             checkArreglo()
         }else{
-            checkArreglo()
             let index = arr.indexOf(flavors[row])
             arr.removeAtIndex(index!)
             print(arr)
             let multiLineString = arr.joinWithSeparator(", ")
             flavorLabel.text = multiLineString
+            checkArreglo()
             
         }
         
