@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B242541FDCB4713B74DE1C9793E6D21FA7AECEB2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B242541FDCB4713B74DE1C9793E6D21FA7AECEB2" : 0,
+    "B84DBA8D7D97D88D67D34BB84E57BDDDB5F0C120" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6F811B42-F70F-44C9-B5F9-7CCB186C65CA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B242541FDCB4713B74DE1C9793E6D21FA7AECEB2" : "pizzaOrden\/",
+    "B84DBA8D7D97D88D67D34BB84E57BDDDB5F0C120" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "pizzaOrden",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "pizzaOrden.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:julio336\/PizzaApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B242541FDCB4713B74DE1C9793E6D21FA7AECEB2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:julio336\/bitcoinSummary.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B84DBA8D7D97D88D67D34BB84E57BDDDB5F0C120"
+    }
+  ]
+}
